@@ -32,7 +32,7 @@ df_startups["Data Adesão"] = pd.to_datetime(df_startups["Data Adesão"])
 df_startups.info()
 
 #Analisando campos nulos na coluna investidores 
-plt.figure( figsize=(6, 8))
+plt.figure( figsize=(10, 8))
 plt.title("Análise de Campos Nulos")
 sns.heatmap(df_startups.isnull(), cbar=False)
 plt.xticks(rotation=45)  
@@ -60,11 +60,11 @@ percentual_industria_decrescente_top_10 = percentual_industria_decrescente.head(
 percentual_industria_decrescente_top_10 = percentual_industria_decrescente_top_10.sort_values(ascending=True)
 
 #Criando gráfico de barras
-plt.figure(figsize=(12, 7))
+plt.figure(figsize=(10, 7))
 percentual_industria_decrescente_top_10.plot( kind="barh", color="skyblue")
 
 #Adicionando titulo e rotulos de dados 
-plt.title("Distribuição Percentual das Indústrias Startups Unicórnio", fontsize=15)
+plt.title("Top-10 Distribuição Percentual das Indústrias Startups Unicórnio", fontsize=15)
 plt.xlabel("Percentual (%)", fontsize=12)
 plt.ylabel("Industrias", fontsize=12)
 plt.grid(axis="x", linestyle="--", alpha=0.7)
@@ -78,20 +78,69 @@ plt.tight_layout()
 plt.show()
 
 
-
+#Contando o total de startups por país e extraindo o percentual dos mesmos 
 percentual_paises = df_startups["País"].value_counts(normalize=True)* 100
 
 
 #Adicionando titulo e rotulos de dados 
-plt.figure(figsize=(15, 6))
-plt.title("Percentual de Startups Unicórnio por País", fontsize=15)
+plt.figure(figsize=(10, 6))
+plt.title("Top-5 Percentual de Startups Unicórnio por País", fontsize=15)
 plt.pie(
-    percentual_paises.head(4),
-    labels=percentual_paises.index[0:4],
+    percentual_paises.head(5),
+    labels=percentual_paises.index[0:5],
     shadow=True,
     startangle=90,
     autopct="%1.1f%%",
-    colors=["skyblue", "lightgreen", "gold", "brown"]
+    colors=["skyblue", "lightgreen", "gold", "brown", "gray"]
 );
+
+plt.show()
+print(percentual_paises.head(5))
+
+
+#Criando coluna de ano e mês no dataframe 
+df_startups["Mês"] = pd.DatetimeIndex(df_startups["Data Adesão"]).month
+df_startups["Ano"] = pd.DatetimeIndex(df_startups["Data Adesão"]).year
+
+
+# Agrupamento para manter a coluna de avaliação 
+startups_por_pais = df_startups.groupby(by=["País", "Companhia", "Mês", "Ano"]).agg(
+    Quantidade=("Companhia", "count"),
+    Avaliação_mercado=("Avaliação Mercado ($B)", "sum")
+).reset_index()
+
+
+# Renomear coluna contada
+startups_por_pais.rename(columns={"Companhia": "Quantidade"}, inplace=True)
+
+
+
+#Quantidade de empresas que viraram startups no Brasil e Estados Unidos
+qtd_brasil = startups_por_pais.loc[
+    startups_por_pais["País"] == "Brazil", "Quantidade"
+].sum()
+
+qtd_estados_unidos = startups_por_pais.loc[
+    startups_por_pais["País"] == "United States", "Quantidade"
+].sum()
+
+print(f"Brasil Tem {qtd_brasil} Startups no Total \nEstados Unidos Tem {qtd_estados_unidos} Startups no Total")
+
+
+análise_por_país = startups_por_pais.groupby("País")[["Avaliação_mercado"]].sum().reset_index()
+top_5 = análise_por_país[["País", "Avaliação_mercado"]].sort_values(by="Avaliação_mercado", ascending=False).head(5).reset_index()
+
+
+plt.figure(figsize=(10, 6))
+plt.bar(top_5["País"], top_5["Avaliação_mercado"], color='skyblue')
+plt.title("Top-5 Países com Maior Avaliação de Mercado ($B) por Startups")
+plt.xticks(rotation=45)
+plt.grid(axis="y", linestyle="--", alpha=0.7)
+plt.tight_layout()
+
+
+# Adiciona os rótulos no topo das barras
+for i, valor in enumerate(top_5["Avaliação_mercado"]):
+    plt.text(i, valor + 1, f'{valor:.0f}', ha='center', va='bottom', fontsize=10)
 
 plt.show()
