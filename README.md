@@ -104,3 +104,58 @@ Comunicação de resultados
 
 • GitHub == https://github.com/Douglasr7007/
 
+
+📝 Como Usar o Código com o Arquivo de Dados
+
+Este projeto utiliza o arquivo unicorns 2022.csv, que contém informações sobre startups unicórnio até setembro de 2022. Para rodar o código e analisar os dados, siga as etapas abaixo:
+
+1. Baixar ou Obter os Dados
+O arquivo unicorns 2022.csv já está disponível na pasta Dados/ do repositório.
+
+Certifique-se de que o arquivo esteja na mesma estrutura de pastas, ou seja, dentro da pasta Dados/.
+
+2. Rodando o Código
+Para rodar o código, siga os passos abaixo:
+
+Clone o Repositório
+Se ainda não fez isso, clone o repositório para o seu ambiente local usando o seguinte comando:
+
+- git clone https://github.com/Douglasr7007/Case-Startups-Uniconios.git
+- cd Case-Startups-Uniconios
+
+Instalar Dependências
+O código utiliza algumas bibliotecas que precisam ser instaladas. Para instalá-las, crie um ambiente virtual e execute o comando abaixo para instalar as dependências:
+
+- python -m venv venv
+- source venv/bin/activate  # Para sistemas Unix/Linux/MacOS
+- venv\Scripts\activate     # Para Windows
+- pip install -r requirements.txt
+
+Observação: O arquivo requirements.txt deve conter as bibliotecas necessárias, como pandas, matplotlib, seaborn, entre outras.
+
+Executar o Script
+
+Após instalar as dependências, execute o script Case_Startups_Unicórnio.py para carregar e analisar os dados. O script faz o seguinte:
+
+- Lê o arquivo unicorns 2022.csv na pasta Dados/.
+
+- Realiza o tratamento e limpeza dos dados.
+
+- Gera visualizações e análises exploratórias.
+
+- Apresenta insights úteis sobre as startups unicórnio.
+
+- Para rodar o script, basta usar o comando:
+
+- python Projeto_Startups/Case_Startups_Unicórnio.py
+
+3. Visualizações Geradas
+Ao rodar o código, você verá diversos gráficos e visualizações sendo gerados, como:
+
+- Gráfico de barras para as indústrias mais comuns entre as startups unicórnio.
+
+- Gráfico de pizza mostrando a distribuição geográfica por país.
+
+- Gráficos de avaliação de mercado por país.
+
+Esses gráficos ajudarão a entender melhor os padrões de crescimento e as áreas de destaque entre as startups unicórnio até setembro de 2022.
