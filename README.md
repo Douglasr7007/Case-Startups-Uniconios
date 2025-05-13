@@ -37,7 +37,8 @@ Este projeto tem como objetivo explorar, tratar e analisar um conjunto de dados 
 🔹 Heatmap de Valores Nulos
 Através de um heatmap, identificou-se a presença de 18 registros nulos concentrados na coluna Investidores. Por sua baixa representatividade no total, foi decidido manter os registros sem prejuízo à integridade da análise.
 
-![image](https://github.com/user-attachments/assets/66d9fc83-759c-4e9e-b970-aec123d71dbe)
+![image](https://github.com/user-attachments/assets/7c1e37e1-817c-4e42-84a9-b84415dc2736)
+
 
 
 🔹 Top-10 Indústrias de Startups Unicórnio
@@ -49,7 +50,8 @@ Fintech, Internet Software & Services e E-commerce lideram o mercado, somando qu
 
 Empresas que almejam se tornar unicórnios devem observar atentamente esses setores, que demonstram alto potencial de crescimento e validação global. São ramos altamente promissores para novos investimentos e inovação tecnológica.
 
-![image](https://github.com/user-attachments/assets/b457c07a-a715-4c53-bc87-cf041fe26857)
+![image](https://github.com/user-attachments/assets/89dac80e-2d0e-4d23-b228-7c26e7a4c7dd)
+
 
 
 🔹 Distribuição Global por País (Gráfico de Pizza)
