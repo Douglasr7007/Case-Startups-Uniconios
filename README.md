@@ -34,10 +34,14 @@ Este projeto tem como objetivo explorar, tratar e analisar um conjunto de dados 
 
 ![image](https://github.com/user-attachments/assets/8c8bc9bf-55c8-4d8e-85f6-588e57ef0860)
 
+
+
 🔹 Heatmap de Valores Nulos
 Através de um heatmap, identificou-se a presença de 18 registros nulos concentrados na coluna Investidores. Por sua baixa representatividade no total, foi decidido manter os registros sem prejuízo à integridade da análise.
 
-![image](https://github.com/user-attachments/assets/7c1e37e1-817c-4e42-84a9-b84415dc2736)
+
+![image](https://github.com/user-attachments/assets/97262567-7a9b-43ad-8dad-36c8f8e2ff00)
+
 
 
 
@@ -54,6 +58,8 @@ Empresas que almejam se tornar unicórnios devem observar atentamente esses seto
 
 
 
+
+
 🔹 Distribuição Global por País (Gráfico de Pizza)
 A análise da distribuição geográfica revelou que:
 
@@ -66,6 +72,9 @@ A análise da distribuição geográfica revelou que:
 A diferença de quase 50 pontos percentuais entre EUA e China pode estar relacionada a diversos fatores: volume de investimento, ambiente regulatório, capital humano, tecnologia e ecossistema de inovação. Os Estados Unidos se destacam como o epicentro global de startups de alto valor.
 
 ![image](https://github.com/user-attachments/assets/cd0426b4-77b1-4e5c-ad3b-6706d305a4e8)
+
+
+
 
 
 🔹 Avaliação de Mercado por País (Gráfico de Barras)
@@ -110,13 +119,6 @@ Extração de insights de negócios
 Criação de gráficos impactantes
 
 Comunicação de resultados
-
-📌 Autor == Douglas Ribeiro da Silva 
-
-• LinkedIn == https://www.linkedin.com/in/douglas-ribeiro-da-silva/
-
-• GitHub == https://github.com/Douglasr7007/
-
 
 📝 Como Usar o Código com o Arquivo de Dados
 
