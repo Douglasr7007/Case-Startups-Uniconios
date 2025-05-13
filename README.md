@@ -32,8 +32,13 @@ Este projeto tem como objetivo explorar, tratar e analisar um conjunto de dados 
 📈 Principais Análises e Insights
 
 
+![image](https://github.com/user-attachments/assets/8c8bc9bf-55c8-4d8e-85f6-588e57ef0860)
+
 🔹 Heatmap de Valores Nulos
 Através de um heatmap, identificou-se a presença de 18 registros nulos concentrados na coluna Investidores. Por sua baixa representatividade no total, foi decidido manter os registros sem prejuízo à integridade da análise.
+
+![image](https://github.com/user-attachments/assets/66d9fc83-759c-4e9e-b970-aec123d71dbe)
+
 
 🔹 Top-10 Indústrias de Startups Unicórnio
 Um gráfico de barras horizontais evidenciou as 10 indústrias mais recorrentes entre as startups unicórnio:
@@ -43,6 +48,9 @@ Fintech, Internet Software & Services e E-commerce lideram o mercado, somando qu
 📌 Insight Estratégico:
 
 Empresas que almejam se tornar unicórnios devem observar atentamente esses setores, que demonstram alto potencial de crescimento e validação global. São ramos altamente promissores para novos investimentos e inovação tecnológica.
+
+![image](https://github.com/user-attachments/assets/b457c07a-a715-4c53-bc87-cf041fe26857)
+
 
 🔹 Distribuição Global por País (Gráfico de Pizza)
 A análise da distribuição geográfica revelou que:
@@ -54,6 +62,9 @@ A análise da distribuição geográfica revelou que:
 📌 Insight Estratégico:
 
 A diferença de quase 50 pontos percentuais entre EUA e China pode estar relacionada a diversos fatores: volume de investimento, ambiente regulatório, capital humano, tecnologia e ecossistema de inovação. Os Estados Unidos se destacam como o epicentro global de startups de alto valor.
+
+![image](https://github.com/user-attachments/assets/cd0426b4-77b1-4e5c-ad3b-6706d305a4e8)
+
 
 🔹 Avaliação de Mercado por País (Gráfico de Barras)
 O ranking de avaliação de mercado em bilhões de dólares por país mostrou:
